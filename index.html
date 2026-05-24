@@ -135,16 +135,29 @@
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     opacity: 0.95;
   }
-  .card-wrap .tb { position: absolute; bottom: 16px; left: 16px; right: 16px; }
-  .card-wrap .eb {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(255,255,255,0.78); margin-bottom: 4px;
-  }
+  .card-wrap .tb { position: absolute; bottom: 18px; left: 18px; right: 18px; }
   .card-wrap .ti {
     font-family: "Anton", sans-serif;
-    font-size: 24px; line-height: 0.95; letter-spacing: 0.005em;
+    font-size: 36px; line-height: 0.95; letter-spacing: 0.005em;
     text-transform: uppercase; color: white;
+    margin-bottom: 6px;
+  }
+  .card-wrap .niv {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic; font-weight: 400;
+    font-size: 18px; line-height: 1;
+  }
+  .niv-n1 { color: #FA0CF9; }
+  .niv-n2 { background: linear-gradient(90deg, #FA0CF9, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .niv-pont { background: linear-gradient(90deg, #FA0CF9, #fff, #0C94F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .niv-n3 { background: linear-gradient(90deg, #fff, #0C94F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .niv-n4 { color: #0C94F7; }
+  .niv-n5 { background: linear-gradient(90deg, #1E40AF, #FA0CF9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .niv-bonus { color: #fff; }
+  .card-wrap .eb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7); margin-bottom: 8px;
   }
 
   /* Aura color variants */
@@ -202,12 +215,12 @@
     <span class="count">7 COVERS</span>
   </div>
   <div class="modules">
-    <div class="card-wrap"><div class="cover"><img src="covers/01-phoenix-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PHOENIX</div><div class="ti">COMMENCE ICI</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N1-uranie-anthropic.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">URANIE + ANTHROPIC</div><div class="ti">CONCEPTS IA</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/06-hercule-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">HERCULE</div><div class="ti">MINDSET BUILDER</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N1-argo-v2.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">ARGO</div><div class="ti">AGENTS IA</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N1-bouvier.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">BOUVIER</div><div class="ti">LEXIQUE TECH</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N1-persee.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PERSÉE</div><div class="ti">SÉCURITÉ RGPD</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/01-phoenix-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PHOENIX</div><div class="ti">COMMENCE ICI</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-uranie-anthropic.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">URANIE</div><div class="ti">CONCEPTS IA</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/06-hercule-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">HERCULE</div><div class="ti">MINDSET BUILDER</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-argo-v2.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">ARGO</div><div class="ti">AGENTS IA</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-bouvier.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">BOUVIER</div><div class="ti">LEXIQUE TECH</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-persee.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PERSÉE</div><div class="ti">SÉCURITÉ RGPD</div><div class="niv niv-n1">Niveau 1</div></div></div></div>
   </div>
 </div>
 
@@ -220,13 +233,13 @@
     <span class="count">8 COVERS</span>
   </div>
   <div class="modules">
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-cassiopee-claude-v4-sparse.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CASSIOPÉE + CLAUDE</div><div class="ti">CLAUDE CODE</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-orphee-vibecoding.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ORPHÉE + CURSOR/FIGMA/LOVABLE</div><div class="ti">VIBECODING</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-atlas-backend-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ATLAS + SUPABASE/CONVEX</div><div class="ti">BACKEND</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-chiron-n8n-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CHIRON + N8N</div><div class="ti">N8N AUTOMATION</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-gemini-github-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">GÉMEAUX + GITHUB</div><div class="ti">GIT &amp; GITHUB</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-hephaistos.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">HÉPHAÏSTOS</div><div class="ti">CAS PRATIQUES IA</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N2-promethee.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">PROMÉTHÉE</div><div class="ti">BOÎTE À OUTILS</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-cassiopee-claude-v4-sparse.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CASSIOPÉE</div><div class="ti">CLAUDE CODE</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-orphee-vibecoding.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ORPHÉE</div><div class="ti">VIBECODING</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-atlas-backend-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ATLAS</div><div class="ti">BACKEND</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-chiron-n8n-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CHIRON</div><div class="ti">N8N AUTOMATION</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-gemini-github-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">GÉMEAUX</div><div class="ti">GIT &amp; GITHUB</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-hephaistos.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">HÉPHAÏSTOS</div><div class="ti">CAS PRATIQUES IA</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-promethee.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">PROMÉTHÉE</div><div class="ti">BOÎTE À OUTILS</div><div class="niv niv-n2">Niveau 2</div></div></div></div>
   </div>
 </div>
 
@@ -239,7 +252,7 @@
     <span class="count">2 COVERS</span>
   </div>
   <div class="modules" style="grid-template-columns: 1fr;">
-    <div class="card-wrap"><div class="cover"><img src="covers/03-ariane-PONT.png" alt=""><div class="veil"></div><div class="aura a-iridescent">AURA</div><div class="tb"><div class="eb">ARIANE</div><div class="ti">TU FAIS QUOI AVEC ?</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/03-ariane-PONT.png" alt=""><div class="veil"></div><div class="aura a-iridescent">AURA</div><div class="tb"><div class="eb">ARIANE</div><div class="ti">TU FAIS QUOI AVEC ?</div><div class="niv niv-pont">Pont</div></div></div></div>
   </div>
 </div>
 
@@ -252,8 +265,8 @@
     <span class="count">3 COVERS</span>
   </div>
   <div class="modules" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="card-wrap"><div class="cover"><img src="covers/08v2-bellerophon-N3.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">BELLÉROPHON + PÉGASE</div><div class="ti">LIVRER UN PROJET</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N3-helios.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">HÉLIOS</div><div class="ti">FAIRE TOURNER L'ACTIVITÉ</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/08v2-bellerophon-N3.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">BELLÉROPHON</div><div class="ti">LIVRER UN PROJET</div><div class="niv niv-n3">Niveau 3</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N3-helios.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">HÉLIOS</div><div class="ti">FAIRE TOURNER L'ACTIVITÉ</div><div class="niv niv-n3">Niveau 3</div></div></div></div>
   </div>
 </div>
 
@@ -266,13 +279,13 @@
     <span class="count">8 COVERS</span>
   </div>
   <div class="modules">
-    <div class="card-wrap"><div class="cover"><img src="covers/04-janus-N4.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">JANUS</div><div class="ti">CADRE BUSINESS</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-apollon.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APOLLON</div><div class="ti">POSITIONNEMENT</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-artemis.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ARTÉMIS</div><div class="ti">PROSPECTION</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-aphrodite-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APHRODITE</div><div class="ti">CLOSING</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-themis-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">THÉMIS</div><div class="ti">FISCALITÉ</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-hestia.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">HESTIA</div><div class="ti">COMPTA</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N4-athena-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ATHÉNA</div><div class="ti">LITIGES &amp; CRISE</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/04-janus-N4.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">JANUS</div><div class="ti">CADRE BUSINESS</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-apollon.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APOLLON</div><div class="ti">POSITIONNEMENT</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-artemis.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ARTÉMIS</div><div class="ti">PROSPECTION</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-aphrodite-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APHRODITE</div><div class="ti">CLOSING</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-themis-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">THÉMIS</div><div class="ti">FISCALITÉ</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-hestia.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">HESTIA</div><div class="ti">COMPTA</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-athena-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ATHÉNA</div><div class="ti">LITIGES &amp; CRISE</div><div class="niv niv-n4">Niveau 4</div></div></div></div>
   </div>
 </div>
 
@@ -285,11 +298,11 @@
     <span class="count">6 COVERS</span>
   </div>
   <div class="modules">
-    <div class="card-wrap"><div class="cover"><img src="covers/N5-argus-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">ARGUS</div><div class="ti">RECRUTER &amp; DÉLÉGUER</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N5-pygmalion-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PYGMALION</div><div class="ti">PRODUCTISER</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N5-hecatoncheires-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">HÉCATONCHEIRES</div><div class="ti">AGENTIC OS</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N5-dedale-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">DÉDALE</div><div class="ti">MEGA-SKILLS SOP</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/N5-protee-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PROTÉE</div><div class="ti">DU SERVICE AU SAAS</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-argus-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">ARGUS</div><div class="ti">RECRUTER &amp; DÉLÉGUER</div><div class="niv niv-n5">Niveau 5</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-pygmalion-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PYGMALION</div><div class="ti">PRODUCTISER</div><div class="niv niv-n5">Niveau 5</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-hecatoncheires-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">HÉCATONCHEIRES</div><div class="ti">AGENTIC OS</div><div class="niv niv-n5">Niveau 5</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-dedale-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">DÉDALE</div><div class="ti">MEGA-SKILLS SOP</div><div class="niv niv-n5">Niveau 5</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-protee-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PROTÉE</div><div class="ti">DU SERVICE AU SAAS</div><div class="niv niv-n5">Niveau 5</div></div></div></div>
   </div>
 </div>
 
@@ -302,11 +315,11 @@
     <span class="count">6 COVERS</span>
   </div>
   <div class="modules">
-    <div class="card-wrap"><div class="cover"><img src="covers/05-iris-BONUS.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">IRIS</div><div class="ti">NEWSLETTER</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-calliope-content.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CALLIOPE + YT/LINKEDIN</div><div class="ti">CONTENT</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-clio.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CLIO</div><div class="ti">REDIFFUSION LIVES</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-asclepius.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">ASCLEPIUS</div><div class="ti">RGPD AVANCÉ</div></div></div></div>
-    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-cassandre.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CASSANDRE</div><div class="ti">PROCHAINES MAJ</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/05-iris-BONUS.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">IRIS</div><div class="ti">NEWSLETTER</div><div class="niv niv-bonus">Bonus</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-calliope-content.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CALLIOPE</div><div class="ti">CONTENT</div><div class="niv niv-bonus">Bonus</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-clio.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CLIO</div><div class="ti">REDIFFUSION LIVES</div><div class="niv niv-bonus">Bonus</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-asclepius.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">ASCLEPIUS</div><div class="ti">RGPD AVANCÉ</div><div class="niv niv-bonus">Bonus</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-cassandre.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CASSANDRE</div><div class="ti">PROCHAINES MAJ</div><div class="niv niv-bonus">Bonus</div></div></div></div>
   </div>
 </div>
 
