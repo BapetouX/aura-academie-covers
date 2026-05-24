@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Aura Academy — Système complet (40 covers)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050505; --panel: #0E0E0D; --line: #1F1F1F;
+    --muted: #6B6B6B; --text: #FFFFFF;
+    --magenta: #FA0CF9; --blue: #0C94F7; --indigo: #1E40AF; --green: #00FF94;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: "Geist", "Inter", system-ui, sans-serif;
+    padding: 56px 48px 120px;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px; margin-bottom: 32px;
+  }
+  h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.04em; }
+  h1 em {
+    font-family: "Instrument Serif", Georgia, serif; font-style: italic;
+    background: linear-gradient(90deg, var(--magenta), white, var(--blue));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-weight: 400;
+  }
+  .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); line-height: 1.6;
+  }
+  .intro {
+    color: #9B9B9B; font-size: 15px; line-height: 1.6;
+    max-width: 920px; margin-bottom: 32px;
+  }
+  .victory {
+    margin: 0 0 56px; padding: 24px 28px;
+    border: 1px solid rgba(0,255,148,0.4); background: rgba(0,255,148,0.05);
+  }
+  .victory h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 8px; color: var(--green); }
+  .victory p { color: #9B9B9B; font-size: 14px; line-height: 1.6; }
+
+  /* Palette navigation */
+  .palette-nav {
+    display: flex; gap: 18px; margin-bottom: 64px;
+    padding: 18px 22px; border: 1px solid var(--line); background: var(--panel);
+    overflow-x: auto;
+  }
+  .palette-nav a {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--muted); text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .palette-nav a:hover { color: white; }
+  .pn-chip { width: 14px; height: 14px; border: 1px solid rgba(255,255,255,0.1); }
+
+  /* Niveau section */
+  .niveau {
+    margin-bottom: 72px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .niveau:last-child { border-bottom: 0; }
+  .niveau-head {
+    display: flex; align-items: baseline; gap: 14px;
+    margin-bottom: 24px;
+  }
+  .nc { width: 18px; height: 18px; border: 1px solid rgba(255,255,255,0.15); }
+  .niv-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .niveau h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
+  .niveau h2 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; }
+  .count { margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+
+  /* Hero card */
+  .hero {
+    margin-bottom: 22px;
+    background: var(--panel); overflow: hidden;
+    border: 1px solid;
+  }
+  .hero .cover { aspect-ratio: 16/9; position: relative; background: #000; overflow: hidden; }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero .badge {
+    position: absolute; top: 18px; left: 22px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    background: rgba(10,10,9,0.85); backdrop-filter: blur(8px);
+    padding: 6px 12px; border: 1px solid var(--line);
+  }
+  .hero .aura {
+    position: absolute; top: 18px; right: 28px;
+    font-family: "Anton", sans-serif;
+    font-size: 30px; line-height: 1; letter-spacing: 0.01em;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    opacity: 0.95;
+  }
+  .hero .tb { position: absolute; bottom: 28px; left: 28px; right: 28px; }
+  .hero .eb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.8); margin-bottom: 8px;
+  }
+  .hero .ti {
+    font-family: "Anton", sans-serif;
+    font-size: 48px; line-height: 0.95; letter-spacing: 0.005em;
+    text-transform: uppercase; color: white;
+  }
+  .veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.92) 100%);
+    pointer-events: none;
+  }
+
+  /* Modules grid */
+  .modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card-wrap { background: var(--panel); border: 1px solid var(--line); overflow: hidden; }
+  .card-wrap .cover { aspect-ratio: 16/9; position: relative; background: #000; overflow: hidden; }
+  .card-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card-wrap .aura {
+    position: absolute; top: 12px; right: 18px;
+    font-family: "Anton", sans-serif;
+    font-size: 20px; line-height: 1; letter-spacing: 0.01em;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    opacity: 0.95;
+  }
+  .card-wrap .tb { position: absolute; bottom: 16px; left: 16px; right: 16px; }
+  .card-wrap .eb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.78); margin-bottom: 4px;
+  }
+  .card-wrap .ti {
+    font-family: "Anton", sans-serif;
+    font-size: 24px; line-height: 0.95; letter-spacing: 0.005em;
+    text-transform: uppercase; color: white;
+  }
+
+  /* Aura color variants */
+  .a-magenta { background: linear-gradient(180deg, #FA0CF9 0%, #FF9CF9 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-magenta-white { background: linear-gradient(90deg, #FA0CF9 0%, #FFFFFF 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-iridescent { background: linear-gradient(90deg, #FA0CF9 0%, #FFFFFF 50%, #0C94F7 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-white-blue { background: linear-gradient(90deg, #FFFFFF 0%, #0C94F7 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-blue { background: linear-gradient(180deg, #0C94F7 0%, #5BBCFF 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-indigo-magenta { background: linear-gradient(90deg, #1E40AF 0%, #FA0CF9 100%); -webkit-background-clip: text; background-clip: text; }
+  .a-white { background: linear-gradient(180deg, #FFFFFF 0%, #C8C8C8 100%); -webkit-background-clip: text; background-clip: text; }
+
+  footer {
+    margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--line);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); display: flex; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="meta" style="margin-bottom:14px;">// REFONTE ACADÉMIE AURA / SYSTÈME COMPLET / 40 COVERS</div>
+    <h1>Le système <em>complet</em></h1>
+  </div>
+  <div class="meta" style="text-align:right;">
+    7 NIVEAUX · 40 COVERS<br>
+    GPT IMAGE 2 · 2K · 16:9<br>
+    PALETTE PNG RÉFÉRENCE
+  </div>
+</header>
+
+<div class="victory">
+  <h3>✓ Système complet — 7 niveaux · 40 personas mythologiques uniques</h3>
+  <p>Du Sage qui médite au Gardien des archives, en passant par le Bâtisseur, le Passeur Hermès, Niké la Victoire, Plutus le Marchand, et Zeus le Roi. Chaque persona unique en constellation astronomique, couleur exacte par palette PNG.</p>
+</div>
+
+<nav class="palette-nav">
+  <a href="#n1"><span class="pn-chip" style="background:#FA0CF9"></span>N1 COMPRENDRE</a>
+  <a href="#n2"><span class="pn-chip" style="background:linear-gradient(135deg,#FA0CF9,#fff)"></span>N2 CONSTRUIRE</a>
+  <a href="#pont"><span class="pn-chip" style="background:linear-gradient(135deg,#FA0CF9,#fff,#0C94F7)"></span>PONT</a>
+  <a href="#n3"><span class="pn-chip" style="background:linear-gradient(135deg,#fff,#0C94F7)"></span>N3 LIVRER</a>
+  <a href="#n4"><span class="pn-chip" style="background:#0C94F7"></span>N4 VENDRE</a>
+  <a href="#n5"><span class="pn-chip" style="background:linear-gradient(135deg,#1E40AF,#FA0CF9)"></span>N5 SCALER</a>
+  <a href="#bonus"><span class="pn-chip" style="background:#fff"></span>BONUS</a>
+</nav>
+
+<!-- ============ N1 COMPRENDRE ============ -->
+<div class="niveau" id="n1">
+  <div class="niveau-head">
+    <span class="nc" style="background:#FA0CF9"></span>
+    <span class="niv-tag">N1 · MAGENTA</span>
+    <h2>Niveau 1 — <em style="color:#FA0CF9">Comprendre</em></h2>
+    <span class="count">7 COVERS</span>
+  </div>
+  <div class="modules">
+    <div class="card-wrap"><div class="cover"><img src="covers/01-phoenix-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PHOENIX</div><div class="ti">COMMENCE ICI</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-uranie-anthropic.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">URANIE + ANTHROPIC</div><div class="ti">CONCEPTS IA</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/06-hercule-N1.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">HERCULE</div><div class="ti">MINDSET BUILDER</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-argo-v2.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">ARGO</div><div class="ti">AGENTS IA</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-bouvier.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">BOUVIER</div><div class="ti">LEXIQUE TECH</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N1-persee.png" alt=""><div class="veil"></div><div class="aura a-magenta">AURA</div><div class="tb"><div class="eb">PERSÉE</div><div class="ti">SÉCURITÉ RGPD</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ N2 CONSTRUIRE ============ -->
+<div class="niveau" id="n2">
+  <div class="niveau-head">
+    <span class="nc" style="background:linear-gradient(135deg,#FA0CF9,#fff)"></span>
+    <span class="niv-tag">N2 · MAGENTA → BLANC</span>
+    <h2>Niveau 2 — <em style="background:linear-gradient(90deg,#FA0CF9,#fff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Construire</em></h2>
+    <span class="count">8 COVERS</span>
+  </div>
+  <div class="modules">
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-cassiopee-claude-v4-sparse.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CASSIOPÉE + CLAUDE</div><div class="ti">CLAUDE CODE</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-orphee-vibecoding.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ORPHÉE + CURSOR/FIGMA/LOVABLE</div><div class="ti">VIBECODING</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-atlas-backend-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">ATLAS + SUPABASE/CONVEX</div><div class="ti">BACKEND</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-chiron-n8n-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">CHIRON + N8N</div><div class="ti">N8N AUTOMATION</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-gemini-github-v3.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">GÉMEAUX + GITHUB</div><div class="ti">GIT &amp; GITHUB</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-hephaistos.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">HÉPHAÏSTOS</div><div class="ti">CAS PRATIQUES IA</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N2-promethee.png" alt=""><div class="veil"></div><div class="aura a-magenta-white">AURA</div><div class="tb"><div class="eb">PROMÉTHÉE</div><div class="ti">BOÎTE À OUTILS</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ PONT ============ -->
+<div class="niveau" id="pont">
+  <div class="niveau-head">
+    <span class="nc" style="background:linear-gradient(135deg,#FA0CF9,#fff,#0C94F7)"></span>
+    <span class="niv-tag">PONT · IRIDESCENT</span>
+    <h2>Pont — <em style="background:linear-gradient(90deg,#FA0CF9,#fff,#0C94F7); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Transition</em></h2>
+    <span class="count">2 COVERS</span>
+  </div>
+  <div class="modules" style="grid-template-columns: 1fr;">
+    <div class="card-wrap"><div class="cover"><img src="covers/03-ariane-PONT.png" alt=""><div class="veil"></div><div class="aura a-iridescent">AURA</div><div class="tb"><div class="eb">ARIANE</div><div class="ti">TU FAIS QUOI AVEC ?</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ N3 LIVRER ============ -->
+<div class="niveau" id="n3">
+  <div class="niveau-head">
+    <span class="nc" style="background:linear-gradient(135deg,#fff,#0C94F7)"></span>
+    <span class="niv-tag">N3 · BLANC → BLEU</span>
+    <h2>Niveau 3 — <em style="background:linear-gradient(90deg,#fff,#0C94F7); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Livrer</em></h2>
+    <span class="count">3 COVERS</span>
+  </div>
+  <div class="modules" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="card-wrap"><div class="cover"><img src="covers/08v2-bellerophon-N3.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">BELLÉROPHON + PÉGASE</div><div class="ti">LIVRER UN PROJET</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N3-helios.png" alt=""><div class="veil"></div><div class="aura a-white-blue">AURA</div><div class="tb"><div class="eb">HÉLIOS</div><div class="ti">FAIRE TOURNER L'ACTIVITÉ</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ N4 VENDRE ============ -->
+<div class="niveau" id="n4">
+  <div class="niveau-head">
+    <span class="nc" style="background:#0C94F7"></span>
+    <span class="niv-tag">N4 · BLEU AURA</span>
+    <h2>Niveau 4 — <em style="color:#0C94F7">Vendre</em></h2>
+    <span class="count">8 COVERS</span>
+  </div>
+  <div class="modules">
+    <div class="card-wrap"><div class="cover"><img src="covers/04-janus-N4.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">JANUS</div><div class="ti">CADRE BUSINESS</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-apollon.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APOLLON</div><div class="ti">POSITIONNEMENT</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-artemis.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ARTÉMIS</div><div class="ti">PROSPECTION</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-aphrodite-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">APHRODITE</div><div class="ti">CLOSING</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-themis-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">THÉMIS</div><div class="ti">FISCALITÉ</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-hestia.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">HESTIA</div><div class="ti">COMPTA</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N4-athena-v2.png" alt=""><div class="veil"></div><div class="aura a-blue">AURA</div><div class="tb"><div class="eb">ATHÉNA</div><div class="ti">LITIGES &amp; CRISE</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ N5 SCALER ============ -->
+<div class="niveau" id="n5">
+  <div class="niveau-head">
+    <span class="nc" style="background:linear-gradient(135deg,#1E40AF,#FA0CF9)"></span>
+    <span class="niv-tag">N5 · INDIGO → MAGENTA</span>
+    <h2>Niveau 5 — <em style="background:linear-gradient(90deg,#1E40AF,#FA0CF9); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Scaler</em></h2>
+    <span class="count">6 COVERS</span>
+  </div>
+  <div class="modules">
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-argus-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">ARGUS</div><div class="ti">RECRUTER &amp; DÉLÉGUER</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-pygmalion-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PYGMALION</div><div class="ti">PRODUCTISER</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-hecatoncheires-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">HÉCATONCHEIRES</div><div class="ti">AGENTIC OS</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-dedale-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">DÉDALE</div><div class="ti">MEGA-SKILLS SOP</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/N5-protee-v3.png" alt=""><div class="veil"></div><div class="aura a-indigo-magenta">AURA</div><div class="tb"><div class="eb">PROTÉE</div><div class="ti">DU SERVICE AU SAAS</div></div></div></div>
+  </div>
+</div>
+
+<!-- ============ BONUS ============ -->
+<div class="niveau" id="bonus">
+  <div class="niveau-head">
+    <span class="nc" style="background:#fff"></span>
+    <span class="niv-tag">BONUS · BLANC</span>
+    <h2>Bonus — <em>Ressources</em></h2>
+    <span class="count">6 COVERS</span>
+  </div>
+  <div class="modules">
+    <div class="card-wrap"><div class="cover"><img src="covers/05-iris-BONUS.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">IRIS</div><div class="ti">NEWSLETTER</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-calliope-content.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CALLIOPE + YT/LINKEDIN</div><div class="ti">CONTENT</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-clio.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CLIO</div><div class="ti">REDIFFUSION LIVES</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-asclepius.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">ASCLEPIUS</div><div class="ti">RGPD AVANCÉ</div></div></div></div>
+    <div class="card-wrap"><div class="cover"><img src="covers/BONUS-cassandre.png" alt=""><div class="veil"></div><div class="aura a-white">AURA</div><div class="tb"><div class="eb">CASSANDRE</div><div class="ti">PROCHAINES MAJ</div></div></div></div>
+  </div>
+</div>
+
+<footer>
+  <span>// REFONTE-ACADEMIE / SYSTÈME COMPLET / 2026-05-24</span>
+  <span>BAPTISTE.SIMARD · AURA.ACADEMY</span>
+</footer>
+
+</body>
+</html>
