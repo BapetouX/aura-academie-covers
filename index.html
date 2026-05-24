@@ -146,13 +146,30 @@
     font-family: "Instrument Serif", Georgia, serif;
     font-style: italic; font-weight: 400;
     font-size: 18px; line-height: 1;
+    display: inline-block;
   }
   .niv-n1 { color: #FA0CF9; }
-  .niv-n2 { color: #FA0CF9; }
-  .niv-pont { background: linear-gradient(90deg, #FA0CF9, #FFFFFF, #0C94F7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .niv-n3 { color: #0C94F7; }
+  .niv-n2 {
+    background: linear-gradient(90deg, #FA0CF9 0%, #FFFFFF 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; color: transparent;
+  }
+  .niv-pont {
+    background: linear-gradient(90deg, #FA0CF9 0%, #FFFFFF 50%, #0C94F7 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; color: transparent;
+  }
+  .niv-n3 {
+    background: linear-gradient(90deg, #FFFFFF 0%, #0C94F7 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; color: transparent;
+  }
   .niv-n4 { color: #0C94F7; }
-  .niv-n5 { color: #FA0CF9; }
+  .niv-n5 {
+    background: linear-gradient(90deg, #1E40AF 0%, #FA0CF9 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; color: transparent;
+  }
   .niv-bonus { color: #FFFFFF; }
   .card-wrap .eb {
     font-family: "JetBrains Mono", monospace;
